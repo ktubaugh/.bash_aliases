@@ -1,4 +1,3 @@
-
 # RASPBERRY PI ONLY: Creates an alias named "temp" and monitors the active temperature of the Raspberry Pi. It updates every second.
 alias temp='watch -n vcgencmd measure_temp'
 
