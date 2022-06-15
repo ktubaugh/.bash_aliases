@@ -1,0 +1,12 @@
+
+# Pi-hole ONLY - Creates an alias named "phud" and performs various updates & upgrades for the Pi-hole Ad-Blocking software.
+alias phud='sudo pihole -up -y && sudo pihole restartdns && sudo pihole -up -y && sudo pihole updateGravity -y'
+
+# Pi-hole ONLY - Creates an alias named “phstats” and displays the Pi-hole Chronometer statistics snapshot
+alias phstats='pihole -c'
+
+# Pi-hole ONLY - Creates an alias named “phstart” and enables the Pi-hole.
+alias phstart='pihole enable'
+
+# Pi-hole ONLY - Creates an alias named “phstop” and disables the Pi-hole.
+alias phstop='pihole disable'
