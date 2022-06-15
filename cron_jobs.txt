@@ -1,0 +1,7 @@
+
+# Cron jobs added by InServio Technologies LLC. For support, contact us at Help@InServioTech.com
+10 0 * * * inserviotech /sbin/hwclock -w # synchronize hardware and system clock each day at 12:10 am
+10 1 * * * inserviotech ~/.bash_aliases/phud # update Pi-hole system software, restart DNS server, and update Gravity DNS cache each day at 01:10 am
+10 2 * * * inserviotech ~/.bash_aliases/update # update system, upgrade system, and autoremove each day at 02:10 am
+10 3 * * * inserviotech ~/.bash_aliases/upgrade # upgrade system, upgrade system, and autoremove each day at 03:10 am
+10 4 * * 0 inserviotech /sbin/shutdown -r now "weekly reboot" # reboot every Sunday at 4:10 am
