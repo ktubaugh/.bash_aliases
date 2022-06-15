@@ -1,0 +1,22 @@
+# Creates an alias named "please" and invokes the sudo command.
+alias please='sudo'
+
+# Creates an alias named "update" and performs various updates & upgrades.
+alias update='sudo apt install --fix-broken -y && sudo apt install -f && sudo apt-file update && phud && sudo apt autoremove -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt install --purge -y'
+
+# Creates an alias named "upgrade" and distribution upgrades.
+alias upgrade='sudo apt install --fix-broken -y && sudo apt install -f && sudo apt-file update && pihole -up && phud && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt install --purge -y'
+
+# Creates an alias named “version” and “ver” and displays the Linux version.
+alias version='cat /etc/os-release -n'
+alias ver='cat /etc/os-release -n'
+
+# Creates an alias named "shutdown" and forces the shutdown command to reboot.
+alias shutdown='sudo shutdown -r now'
+
+# Creates an alias named "cls" and an alias name "c" and clears the terminal/console screen.
+alias cls='clear'
+alias c='clear'
+
+# Creates an alias named "up" and displays four Linux uptime commands at once.
+alias up='uptime && uptime -p && uptime -s && uptime -V'
