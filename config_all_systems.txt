@@ -2,10 +2,10 @@
 alias please='sudo'
 
 # Creates an alias named "update" and performs various updates & upgrades.
-alias update='sudo apt install --fix-broken -y && sudo apt install -f && sudo apt-file update && sudo apt autoremove -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt install --purge -y'
+alias update='sudo apt update && sudo apt install --fix-broken -y && sudo apt install -f && sudo apt autoremove -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt install --purge -y'
 
 # Creates an alias named "upgrade" and distribution upgrades.
-alias upgrade='sudo apt install --fix-broken -y && sudo apt install -f && sudo apt-file update && pihole -up && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt install --purge -y'
+alias upgrade='sudo apt update && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt full-upgrade -y && sudo apt install --fix-broken -y && sudo apt install -f && sudo apt autoremove -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt install --purge -y'
 
 # Creates an alias named “version” and “ver” and displays the Linux version.
 alias version='cat /etc/os-release -n'
@@ -20,3 +20,4 @@ alias c='clear'
 
 # Creates an alias named "up" and displays four Linux uptime commands at once.
 alias up='uptime && uptime -p && uptime -s && uptime -V'
+
