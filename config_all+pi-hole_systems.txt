@@ -1,11 +1,14 @@
 # Creates an alias named "please" and invokes the sudo command.
 alias please='sudo'
 
-# Creates an alias named "update" and performs various updates & upgrades.
-alias update='sudo apt install --fix-broken -y && sudo apt install -f && sudo apt-file update && phud && sudo apt autoremove -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt install --purge -y'
+# Creates an alias named "clean" and performs various clean-up and fix commands using APT.
+alias clean='sudo apt install -f; sudo apt-get install --fix-broken -y; sudo apt-get autoremove -y; sudo apt-get clean -y; sudo apt-get autoclean -y; sudo apt install --purge -y'
 
-# Creates an alias named "upgrade" and distribution upgrades.
-alias upgrade='sudo apt install --fix-broken -y && sudo apt install -f && sudo apt-file update && pihole -up && phud && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo apt clean -y && sudo apt autoclean -y && sudo apt install --purge -y'
+# Creates an alias named "update" and performs various updates.
+alias update='sudo apt-file update; phud; clean'
+
+# Creates an alias named "upgrade" and performs various updates, upgrades, and distribution upgrades.
+alias upgrade='update; sudo apt-get upgrade -y; phud; pihole -up; sudo apt-get dist-upgrade -y && sudo apt-get full-upgrade -y; clean'
 
 # Creates an alias named “version” and “ver” and displays the Linux version.
 alias version='cat /etc/os-release -n'
