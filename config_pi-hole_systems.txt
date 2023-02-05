@@ -1,5 +1,5 @@
 
-# Modified by Kenneth Tubaugh on 2023.02.06
+# Modified by Kenneth Tubaugh on 2023.02.05
 
 # Pi-hole ONLY - Creates an alias named "phud" and performs various updates & upgrades for the Pi-hole Ad-Blocking software.
 alias phud='sudo pihole -up -y && sudo pihole restartdns && sudo pihole -up -y && sudo pihole updateGravity -y'
